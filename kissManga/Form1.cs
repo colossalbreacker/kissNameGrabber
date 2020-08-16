@@ -16,11 +16,12 @@ namespace kissManga
         public grabber()
         {
             InitializeComponent();
-            names = new List<string>();
+            
         }
-        List<string> names;
         private void button1_Click(object sender, EventArgs e) //shitty code that works
         {
+            List<string> names = new List<string>();
+
             string temp = "";
             string search = "";
             string output = "";
@@ -89,6 +90,16 @@ namespace kissManga
             {
                 textBox1.Text = fdlg.FileName;
             }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://takeout.google.com/settings/takeout");
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.nirsoft.net/utils/browsing_history_view.html");
         }
     }
 }
