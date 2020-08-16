@@ -47,7 +47,7 @@ namespace kissManga
                         if (index > -1)
                         {
                             temp = temp.Substring(index, temp.Length - index);
-                            string[] arr = temp.Split('/', ',', '?');
+                            string[] arr = temp.Split('/', ',', '?','"');
                             arr[2] = arr[2].Replace('-', ' ');
                             if (!names.Contains(arr[2]))
                                 names.Add(arr[2]);
